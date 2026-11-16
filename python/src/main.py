@@ -11,3 +11,7 @@ def hello():
 @app.get("/healthy")
 def healthy():
     return {"status": "healthy"}
+
+@app.get("/remove")
+def remove():
+    return {"remove:" "system32"}
