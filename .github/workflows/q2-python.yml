@@ -1,5 +1,11 @@
 name: Python
 
+on:
+    pull_request:
+        branches: 
+            - 'develop'
+        types:
+            - accepted
 
 jobs:
   build:
@@ -19,4 +25,7 @@ jobs:
 
       - name: Check
         run: python -m py_compile src/main.py
+
+      - name: Executa os testes
+        run:  python -m pytest
 
