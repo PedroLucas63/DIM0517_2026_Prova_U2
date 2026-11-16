@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 app = FastAPI()
-
+print("Você é bem vindo a nossa aplicação!")
 
 @app.get("/hello")
 def hello():
