@@ -15,3 +15,7 @@ def healthy():
 @app.get("/remove")
 def remove():
     return {"remove:" "system32"}
+
+@app.get("/install")
+def remove():
+    return {"install:" "arch"}
