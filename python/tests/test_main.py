@@ -15,3 +15,8 @@ def test_healthy():
     response = client.get("/healthy")
     assert response.status_code == 200
     assert response.json() == {"status": "healthy"}
+
+def test_remove():
+    response = client.get("/remove")
+    assert response.status_code == 200
+    assert response.json() == {"remove": "system32"}
