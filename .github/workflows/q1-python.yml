@@ -1,4 +1,4 @@
-name: Python
+name: Q1 Python
 
 on:
     push:

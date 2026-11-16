@@ -1,4 +1,4 @@
-name: Python
+name: Q3 Python
 
 on:
     pull_request:
