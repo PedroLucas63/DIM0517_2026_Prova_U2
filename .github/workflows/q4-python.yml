@@ -1,5 +1,7 @@
 name: Python
 
+on:
+    workflow_dispatch:  
 
 jobs:
   build:
@@ -21,3 +23,12 @@ jobs:
 
       - name: Check
         run: python -m py_compile src/main.py
+
+      - name: Executa os testes unitários
+        run: python -m pytest
+
+      - name: Construir a imagem docker
+        run: docker build -t meuapp:main .
+
+      - name: Sobe a imagem docker
+        run: docker run --rm --name meuapp meuapp:main
