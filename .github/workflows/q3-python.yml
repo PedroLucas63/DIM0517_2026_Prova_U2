@@ -1,5 +1,11 @@
 name: Python
 
+on:
+    pull_request:
+        branches:
+            - 'develop'
+        types:
+            - accepted
 
 jobs:
   build:
@@ -22,3 +28,9 @@ jobs:
       - name: Check
         run: python -m py_compile src/main.py
 
+      - name: Criar tag
+        env:
+            TAG: "build-${{ github.run_id }}"
+        run: | 
+            git tag $TAG
+            git push --tags 
