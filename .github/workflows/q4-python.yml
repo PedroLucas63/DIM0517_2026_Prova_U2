@@ -31,4 +31,4 @@ jobs:
         run: docker build -t meuapp:main .
 
       - name: Sobe a imagem docker
-        run: docker run --rm --name meuapp meuapp:main
+        run: docker run --rm -d --name meuapp meuapp:main
